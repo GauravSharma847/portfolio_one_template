@@ -1,0 +1,24 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: yellow;
+        position: relative;      // makes this container relative and if put put something it   will start after topbar which is 70px
+        top: 70px;
+        scroll-behavior: smooth; // scrolling will be slow after we click logo
+        scroll-snap-type: y mandatory;  // it has to be snap type mandotary in yaxis scroll
+                            // it means that scroll will be on one card  and not between 2 cards
+        scrollbar-width: none;  // for firefox
+        &::-webkit-scrollbar{
+                                display: none;   // to hide scrollbar for other browser
+                            }
+        >*{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;   // scroll will go to starting point if its on the infront of it
+           
+        }
+    }
+}

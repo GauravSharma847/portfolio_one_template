@@ -1,0 +1,9 @@
+$mainColor: #15023a;   // fixing a color to use multiple places
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
